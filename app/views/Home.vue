@@ -14,7 +14,7 @@ import { ref } from 'vue'
 import { useTemperaturesStore } from '@/stores/temperatures'
 
 const store = useTemperaturesStore()
-const loading = ref(false)
+const isLoading = ref(false)
 
 const query = ref({
   search: '',
