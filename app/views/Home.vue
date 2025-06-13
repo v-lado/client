@@ -5,7 +5,7 @@
     :items="store.municipalities"
     :loading="isLoading"
     item-value="name"
-    @update:options="store.filterBy(query)"
+    @update:options="loadItems"
   />
 </template>
 
