@@ -4,7 +4,12 @@ import { defineStore } from 'pinia'
 import debounce from 'lodash/debounce'
 import useAxios from '@/hooks/axios'
 
-import type { AxiosRequestConfig } from 'axios'
+interface IQueryString {
+  search?: string,
+  sort?: string,
+  limit?: number,
+  offset?: number
+}
 
 export const useTemperaturesStore = defineStore('temperatures', () => {
   let controller: AbortController
@@ -12,7 +17,7 @@ export const useTemperaturesStore = defineStore('temperatures', () => {
   const { api } = useAxios()
   const municipalities = ref([])
 
-  const filterBy = debounce((params: AxiosRequestConfig) => {
+  const filterBy = debounce((params: IQueryString) => {
     controller && !controller.signal.aborted && controller.abort()
     controller = new AbortController()
 
