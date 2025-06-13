@@ -19,7 +19,7 @@ import { useRouter } from 'vue-router'
 
 const router = useRouter()
 
-const go = to => {
+const go = (to: string) => {
   if (!document.startViewTransition) {
     router.push({ name: to })
     return
