@@ -3,8 +3,8 @@
     <v-app-bar :order="-1" color="grey-lighten-2" class="pe-3" flat>
       <v-app-bar-title>TEMP SK</v-app-bar-title>
 
-      <v-btn density="compact" icon="$home" @click="go('home')" />
-      <v-btn density="compact" icon="$info" @click="go('info')" />
+      <v-btn icon="$home" @click="go('home')" />
+      <v-btn icon="$info" @click="go('info')" />
     </v-app-bar>
 
     <v-main>
